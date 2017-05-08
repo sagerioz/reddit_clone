@@ -56,7 +56,7 @@
   type="text"
   class="form-control"
   id="title">
-  <span ng-show="$ctrl.userForm.title.$error">Title must be entered</span><br>
+  <span ng-show="$ctrl.userForm.title.$error && !$ctrl.userForm.title.$pristine" >Title must be entered</span><br>
 
   <label class="control-label" for="author">Author</label><br>
    <input
@@ -115,7 +115,7 @@
           <div class="text-right">
             {{ posts.author }}
           </div>
-          <img ng-src="{{ posts.img }}" alt="{{author}}" id="img_posts"/>
+          <img ng-src="{{ posts.img }}" alt="{{ posts.author }}" id="img_posts"/>
           <p>
             {{ posts.body }}
           </p>

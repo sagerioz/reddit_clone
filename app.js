@@ -85,6 +85,7 @@ vm.createPost = function () {
     vm.postObj.img = "https://s16-us2.ixquick.com/cgi-bin/serveimage?url=https%3A%2F%2Fd3g919u5f14ld1.cloudfront.net%2Fassets%2Fimages%2Fusers%2Fdefault-avatar.svg&sp=96f3d16b6b3c21675f471d8ccc527e16"
   }
   vm.postObj.votes = 0
+  vm.postObj.date = moment().calendar()
   vm.blogDB.push(vm.postObj)
     delete vm.postObj
 }
